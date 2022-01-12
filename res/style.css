@@ -1,0 +1,218 @@
+/*
+ *  Sebastian Schindler | Paul Rakutt
+ *  Simple Web Todolist | Written in HTML, PHP, CSS And JavaScript
+ *  Version 0.0.3 | Copyright DarkModz & Cookieleaks 2020-2022
+ *  
+ *  Stylesheet File for the Simple Todolist
+ *
+*/
+
+
+/* * * I M P O R T S * * */
+@import url("https://use.typekit.net/tfz3hln.css"); /* font-family: marigny, sans-serif; */
+@import url("https://use.typekit.net/tfz3hln.css"); /* font-family: paralucent, sans-serif; */
+
+
+/* * * S T Y L E S H E E T * * */
+
+html{
+    font-family: paralucent, sans-serif;
+}
+
+h1{
+    font-family: marigny, sans-serif;
+}
+
+p{
+    font-family: marigny, sans-serif;
+}
+
+.textbox {
+    padding: 4px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    /* text-shadow: 0px 0px 5px rgba(66,66,66,.75); */
+}
+.textbox:focus {
+    outline:none;
+}
+
+
+Button {
+	background-color:#24b54b;
+	-webkit-border-radius:28px;
+	-moz-border-radius:28px;
+	border-radius:15px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:18px 17px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+Button:hover {
+	background-color:#5cbf2a;
+}
+
+/*CheckForm CSS für die Listeineinträge*/
+.checkform{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Checkbox CSS @Checkbox */
+.control {
+
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    border: 0px solid #000000;
+    border-radius: 0px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #ee4545;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #0e6647;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+}
+.control-checkbox .control_indicator::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.523rem;
+    height: 4.523rem;
+    margin-left: -1.228rem;
+    margin-top: -1.3rem;
+    background: #ee4545;
+    border-radius: 2.51rem;
+    opacity: 0.5;
+    z-index: 99999;
+    transform: scale(0);
+}
+@keyframes s-ripple {
+    0% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+@keyframes s-ripple-dup {
+   0% {
+       transform: scale(0);
+    }
+   30% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+.control-checkbox input + .control_indicator::before {
+    animation: s-ripple 250ms ease-out;
+}
+.control-checkbox input:checked + .control_indicator::before {
+    animation-name: s-ripple-dup;
+}
+
+/* DarkMode Stylesheet @Darkmode */
+.dark {
+    background-color: #2B2B2B;
+    color: #AEAEB4;
+}
+
+
+/* LightMode Stylesheet @Lightmode */
+.light {
+    background-color: #E6F3FF;
+    color: #2B2B2B;
+}
+
+/* Small Distancer Stylesheet @small distance */
+.small{
+    margin: 15px;
+}
+
+/* center Stylesheet @small distance */
+.center{
+    text-align: center;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}

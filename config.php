@@ -18,11 +18,11 @@ include_once("includes/defines.php");
 // $password = "S3CR3T-P4SSW0RD";    Passwort for Database Server
 // $database = "db_todo";            Database which should be used
 
-$host = "localhost";
+$host = "";
 $port = "3306";
-$user = "todo";
-$password = "lokalius";
-$database = "todo";
+$user = "";
+$password = "";
+$database = "";
 
 
 // Enable or Disable darkmode

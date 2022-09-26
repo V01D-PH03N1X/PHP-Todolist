@@ -17,6 +17,8 @@ include_once("includes/defines.php");
  *
 */
 
+
+
 // SQL CONFIGURATIONS
 // Example:
 //
